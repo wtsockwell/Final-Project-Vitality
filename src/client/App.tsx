@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
+import {Hashpassword} from '../utils/security/password';
 
 /* HOOK REACT EXAMPLE */
 const App = (props: AppProps) => {
 	const [greeting, setGreeting] = useState<string>('');
 
 	useEffect(() => {
+
 		async function getGreeting() {
 			try {
 				const res = await fetch('/api/hello');
@@ -20,7 +22,7 @@ const App = (props: AppProps) => {
 
 	return (
 		<main className="container my-5">
-			<h1 className="text-primary text-center">Hello {greeting}!</h1>
+			<h1 className="text-primary text-center">Hello {greeting}!</h1>			
 		</main>
 	);
 };

@@ -11,6 +11,10 @@ export default {
         database:process.env.DB_DATABASE,
         port:process.env.DB_PORT
 
+    },
+    twitter:{
+        bearer:process.env.TW_Bearer
     }
+    
 
 }
