@@ -51,6 +51,7 @@ router.get('/europeansocietyofcardiology', async (req, res, next) => {
         });
 
         const data = await response.json()
+        console.log('test')
         res.json(data)
 
     } catch (error) {
@@ -60,4 +61,6 @@ router.get('/europeansocietyofcardiology', async (req, res, next) => {
     }
 })
 
-export default router; 
+
+
+export default router;
