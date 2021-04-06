@@ -7,7 +7,7 @@ router.get('/:id?', async (req, res) => {
     try {
         let id: string = req.params.id
         if (id) {
-            res.json((await db.events.one(id))[0])
+            res.json((await db.events.one(id)))
         } else {
             res.json(await db.events.all())
         }

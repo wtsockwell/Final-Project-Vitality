@@ -7,7 +7,7 @@ router.get('/:id?', async (req, res) => {
     try {
         let id: string = req.params.id
         if (id) {
-            res.json((await db.blogs.one(id))[0])
+            res.json((await db.blogs.one(id)))
         } else {
             res.json(await db.blogs.all())
         }
@@ -20,7 +20,7 @@ router.get('/:id?', async (req, res) => {
 router.post('/', async (req, res) => {
     let blog = req.body
     try {
-        const newblog = await db.blogs.post(blog.title,blog.content,blog.userid)
+        const newblog = await db.blogs.post(blog.title, blog.content, blog.userid)
         res.json(newblog)
     } catch (error) {
         console.log(error)
@@ -31,15 +31,16 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
     let update = req.body
     try {
-        res.json(await db.blogs.put(update.title,update.content, req.params.id))
+        const editedblog = await db.blogs.put(req.params.id, update.title, update.content)
+        res.json(editedblog)
     } catch (error) {
         console.log(error)
         res.sendStatus(500)
     }
 })
 
-router.delete('/:id', async (req, res)=>{
-    let id:string = req.params.id
+router.delete('/:id', async (req, res) => {
+    let id: string = req.params.id
     try {
         res.json(await db.blogs.remove(id))
     } catch (error) {
