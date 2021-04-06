@@ -1,5 +1,10 @@
 import config from '../config';
 import * as mysql from 'mysql';
+import users from './users';
+import blogs from './blogs';
+import recipes from './recipes';
+import events from './events';
+import reservations from './reservations';
 
 export const Pool = mysql.createPool(config.DevEnv.mysql)
 
@@ -13,5 +18,9 @@ export const Query = (query:string, values?:Array<string|number>)=>{
 }
 
 export default {
-    
+    users,
+    blogs,
+    recipes,
+    events,
+    reservations
 }
