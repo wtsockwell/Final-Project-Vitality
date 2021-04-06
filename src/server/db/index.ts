@@ -1,4 +1,4 @@
-import config from '../config ';
+import config from '../config';
 import * as mysql from 'mysql';
 
 export const Pool = mysql.createPool(config.DevEnv.mysql)
