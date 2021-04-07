@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import {Hashpassword} from '../utils/security/password';
 
 
 /* HOOK REACT EXAMPLE */

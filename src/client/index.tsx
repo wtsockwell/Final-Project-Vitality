@@ -4,4 +4,4 @@ import App from './App';
 import BMI from './components/views/bmi'
 import './scss/app';
 
-render(<BMI />, document.getElementById("root"));
+render(<App />, document.getElementById("root"));

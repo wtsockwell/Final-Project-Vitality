@@ -8,7 +8,7 @@ import reservations from './reservationroutes'
 
 const router = express.Router()
 
-router.use('/twitter', twitter)
+router.use(twitter)
 router.use('/users', users)
 router.use('/blogs', blogs)
 router.use('/events', events)

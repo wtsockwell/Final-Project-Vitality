@@ -8,7 +8,7 @@ dotevn.config()
 
 router.get('/worldheartfederation', async (req, res, next) => {
     try {
-        let response = await fetch('https://api.twitter.com/2/tweets/1376066680032526336?tweet.fields=attachments,author_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,referenced_tweets,source,text,withheld', {
+        let response = await fetch('https://api.twitter.com/2/users/83809282/tweets', {
             headers: {
                 Authorization: `Bearer ${process.env.TW_Bearer}`
             }
