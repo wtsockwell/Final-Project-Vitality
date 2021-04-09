@@ -8,12 +8,11 @@ dotevn.config()
 
 router.get('/worldheartfederation', async (req, res, next) => {
     try {
-        let response = await fetch('https://api.twitter.com/2/tweets/1376066680032526336?tweet.fields=attachments,author_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,referenced_tweets,source,text,withheld', {
+        let response = await fetch('https://api.twitter.com/2/users?ids=83809282,105242077,21572529&user.fields=id,location,name,pinned_tweet_id,profile_image_url,username', {
             headers: {
                 Authorization: `Bearer ${process.env.TW_Bearer}`
             }
         });
-
         const data = await response.json()
         res.json(data)
 
@@ -24,9 +23,9 @@ router.get('/worldheartfederation', async (req, res, next) => {
     }
 })
 
-router.get('/americanheartassociation', async (req, res, next) => {
+router.get('/news/:id', async (req, res, next) => {
     try {
-        let response = await fetch('https://api.twitter.com/2/tweets/1378437148236517381?tweet.fields=attachments,author_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,referenced_tweets,source,text,withheld', {
+        let response = await fetch(`https://api.twitter.com/2/users/${req.params.id}/tweets?max_results=6&expansions=attachments.media_keys,author_id&media.fields=duration_ms,height,media_key,preview_image_url,public_metrics,type,url,width&user.fields=profile_image_url`, {
             headers: {
                 Authorization: `Bearer ${process.env.TW_Bearer}`
             }
