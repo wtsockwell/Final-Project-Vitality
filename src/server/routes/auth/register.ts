@@ -1,5 +1,5 @@
 import * as express from "express";
-import DB from "../userroutes";
+import DB from "../../db";
 
 import { Hashpassword } from "../../../utils/security/password";
 import { CreateToken } from "../../../utils/security/token";
@@ -11,7 +11,7 @@ router.post("/", async (req, res, next) => {
 
   try {
     user.password = Hashpassword(req.body.password);
-    let result = await DB.Users.insertUser(
+    let result = await DB.users.post(
       user.email,
       user.firstname,
       user.lastname,

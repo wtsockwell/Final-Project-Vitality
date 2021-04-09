@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
     let user = req.body
     //This section of logic doesn not work as is, but the idea is there. Will come back and fix it
     let premstatus = 0
-    if(user.ispremmember == true){
+    if(user.ispremmember == undefined ){
         premstatus = 1
     } else {premstatus = 0}
     try {

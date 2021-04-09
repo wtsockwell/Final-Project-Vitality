@@ -1,8 +1,8 @@
 import * as crypto from "crypto";
 import * as jwt from "jsonwebtoken";
 import { CleanPlugin } from "webpack";
-import config from "../../config";
-import DB from "../../db";
+// import config from "../../config";
+// import DB from "../../db";
 
 /* Create Token will insert userid into token able, update our payload with the row's id,
     generate a uniquere property using crypto, generate a unique property using crypto,
@@ -41,4 +41,4 @@ export interface IPayload {
   [key: string]: any;
   userid: number;
   unique?: string;
-}'
+}
