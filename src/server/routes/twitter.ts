@@ -30,7 +30,6 @@ router.get('/news/:id', async (req, res, next) => {
                 Authorization: `Bearer ${process.env.TW_Bearer}`
             }
         });
-
         const data = await response.json()
         res.json(data)
 

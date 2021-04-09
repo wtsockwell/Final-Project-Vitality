@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, BrowserRouter } from 'react-router-dom';
-
+import {Link,BrowserRouter} from 'react-router-dom';
 
 const Twitter = () => {
     const [tweet, setTweet] = useState([])

@@ -1,8 +1,8 @@
 import * as crypto from "crypto";
 import * as jwt from "jsonwebtoken";
 import { CleanPlugin } from "webpack";
-// import config from "../../config";
-// import DB from "../../db";
+import config from '../../server/config';
+import db from "../../server/db";
 
 /* Create Token will insert userid into token able, update our payload with the row's id,
     generate a uniquere property using crypto, generate a unique property using crypto,
@@ -11,11 +11,11 @@ import { CleanPlugin } from "webpack";
  */
 
 export const CreateToken = async (payload: IPayload) => {
-  let tokenid: any = await DB.AccessTokens.insertToken(payload.userid);
+  let tokenid: any = await db.token.insertToken(payload.userid);
   payload.accesstokenid = tokenid.insertId;
   payload.unique = crypto.randomBytes(32).toString("hex");
-  let token = await jwt.sign(payload, config.auth.secret);
-  await DB.AccessTokens.updateToken(payload.accesstokenid, token);
+  let token = await jwt.sign(payload, config.DevEnv.auth.security);
+  await db.token.updateToken(payload.accesstokenid, token);
   return token;
 };
 
@@ -26,7 +26,7 @@ export const CreateToken = async (payload: IPayload) => {
 
 export const ValidToken = async (token: string) => {
   let payload: IPayload = <IPayload>jwt.decode(token); // decode into type <IPayload>
-  let accesstokenid = await DB.AccessTokens.locateByToken(
+  let accesstokenid = await db.token.locateByToken(
     payload.accesstokenid,
     token
   );
