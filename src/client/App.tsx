@@ -3,7 +3,10 @@ import { useState, useEffect } from 'react';
 import {Hashpassword} from '../utils/security/password';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import home from './components/home';
-import about from './components/about'
+import about from './components/about';
+import BMI from './components/views/bmi'
+import Twitter from './components/views/news';
+import Feed from './components/views/newsfeed';
 
 
 /* HOOK REACT EXAMPLE */
