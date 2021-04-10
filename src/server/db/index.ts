@@ -5,7 +5,7 @@ import blogs from './blogs';
 import recipes from './recipes';
 import events from './events';
 import reservations from './reservations';
-
+import token from './token'
 export const Pool = mysql.createPool(config.DevEnv.mysql)
 
 export const Query = (query:string, values?:Array<string|number>)=>{
@@ -22,5 +22,6 @@ export default {
     blogs,
     recipes,
     events,
-    reservations
+    reservations,
+    token
 }
