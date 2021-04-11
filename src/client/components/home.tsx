@@ -1,11 +1,13 @@
 import * as React from 'react';
+import Hero from './hero';
 
-const Home = (props:HomeProps) =>{
-    return(
-        <h1>Home</h1>
+
+const Home = (props: HomeProps) => {
+    return (
+        <h2>Home</h2>
     )
 }
 
-interface HomeProps{}; 
+interface HomeProps { };
 
-export default Home; 
+export default Home;

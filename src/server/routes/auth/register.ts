@@ -7,27 +7,43 @@ import { CreateToken } from "../../../utils/security/token";
 const router = express.Router();
 
 router.post("/", async (req, res, next) => {
-  let user= req.body;
-
-  try {
-    user.password = Hashpassword(req.body.password);
-    let result= await DB.users.post(
-      user.email,
-      user.username,
-      user.password,
-      user.ispremmember
-    );
-    let token = await CreateToken({ userid: result.insertId });
-    res.json({
-      token,
-      role: "guest",
-      userid: result.insertId,
-    });
-  } catch (error) {
-    console.log(error);
-    res.sendStatus(500);
-  }
+    let user:Body = req.body;
+    try {
+        let premstatus = 0
+        user.password = Hashpassword(req.body.password);
+        if (user.ispremmember == undefined) {
+            premstatus = 1
+        } else { premstatus = 0 }
+        console.log(premstatus)
+        let result:Result = await DB.users.post(
+            user.email,
+            user.username,
+            user.password,
+            premstatus
+        );
+        
+        let token = await CreateToken({ userid: result.insertId });
+        res.json({
+            token,
+            userid: result.insertId,
+        });
+    } catch (error) {
+        console.log(error);
+        res.sendStatus(500);
+    }
 });
+
+interface Body {
+    password: string,
+    ispremmember: number,
+    email: string,
+    username: string,
+}
+
+interface Result{
+    insertId:number
+
+}
 
 
 

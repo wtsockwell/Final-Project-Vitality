@@ -3,13 +3,7 @@ import db from '../db'
 
 const router = express.Router()
 
-export const isAdmin = (req: ReqUser, res, next) => {
-    if (!req.user || req.user.role !== "guest") {
-      return res.sendStatus(401);
-    } else {
-      return next();
-    }
-  };
+
 
 router.get('/:id?', async (req, res) => {
     try {
@@ -57,10 +51,12 @@ router.delete('/:id', async (req, res) => {
     }
 })
 
-export interface ReqUser extends express.Request {
-    user: {
-      role: string;
-    };
-  }
 
+export interface ReqUser extends express.Request {
+    user: [{
+        username: string,
+        password: string,
+        ispremmember?: number
+    }]
+}
 export default router

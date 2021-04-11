@@ -10,10 +10,7 @@ import reservations from './reservationroutes'
 const router = express.Router()
 
 router.use(twitter)
-router.use('/users', users)
-router.use('/events', events)
-router.use('/recipes', recipes)
-router.use('/reservations', reservations)
+
 
 
 router.use((req, res, next) => {
@@ -22,9 +19,15 @@ router.use((req, res, next) => {
       return next();
     })(req, res, next);
   });
-  
 
+
+router.use('/events', events)
+router.use('/recipes', recipes)
+router.use('/reservations', reservations)
 router.use('/blogs', blogs)
+router.use('/users', users)  
+
+
 
 
 export default router

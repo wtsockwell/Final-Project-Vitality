@@ -1,7 +1,27 @@
 import * as express from 'express'
 import db from '../db'
+import { ReqUser } from './userroutes';
 
 const router = express.Router()
+
+export const isAdmin = (req: ReqUser, res, next) => {
+    if (req.user) {
+        try {
+            let [user] = req.user
+            if (user.ispremmember == 0) {
+                return res.sendStatus(401)
+            } else {
+                return next()
+            }
+        } catch (error) {
+            res.send(error)
+        }
+    } else if (!req.user) {
+        console.log("next")
+        res.sendStatus(401)
+    }
+};
+
 
 router.get('/:id', async(req,res) =>{
     try {

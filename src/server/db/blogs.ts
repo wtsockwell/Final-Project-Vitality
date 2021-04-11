@@ -1,5 +1,6 @@
 import {Query} from './index'
 
+
 const all = async () => Query('SELECT b.id, u.username as user, b.title, b.content FROM blogs b JOIN users u ON u.id = b.userid ORDER BY b.id')
 
 const one = async (id:string) => Query('SELECT u.username as user, b.title, b.content FROM blogs b JOIN users u ON u.id = b.userid WHERE b.id =?', [id])

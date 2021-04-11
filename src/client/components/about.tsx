@@ -1,11 +1,12 @@
 import * as React from 'react';
 
-const About = (props:AboutProps) =>{
-    return(
-        <h1>About</h1>
+
+const About = (props: AboutProps) => {
+    return (
+        <h2>About</h2>
     )
 }
 
-interface AboutProps{}; 
+interface AboutProps { };
 
-export default About; 
+export default About;

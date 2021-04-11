@@ -1,5 +1,7 @@
 import {Query} from './index'
 
+const findByEmail = async (email: string) => Query(`SElECT * FROM users WHERE email = '${email}'`);
+
 const all = async () => Query('SELECT id, username, email, ispremmember FROM users')
 
 const one = async (id:string) => Query('SELECT username, email, ispremmember FROM users WHERE id=?', [id])
@@ -11,6 +13,7 @@ const put = async (email:string,username:string,password:string,ispremmember:num
 const remove = async (id:string) => Query('DELETE FROM users WHERE id=?', [id])
 
 export default {
+    findByEmail,
     all,
     one,
     post,

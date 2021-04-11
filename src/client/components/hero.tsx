@@ -2,15 +2,13 @@ import * as React from 'react';
 
 
 
-const Hero = (props:HeroProps) =>{
+const Hero = (props: HeroProps) => {
 
-    return(
+    return (
         <h1>Hero</h1>
     )
-
-
 }
 
-interface HeroProps {};
+interface HeroProps { };
 
-export default Hero; 
+export default Hero;
