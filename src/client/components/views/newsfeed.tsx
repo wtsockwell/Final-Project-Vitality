@@ -17,7 +17,7 @@ const Feed: React.FC<Feed> = (props: Feed) => {
             try {
                 const res = await fetch(`api/news/${105242077}`)
                 let { includes, data } = await res.json()
-                includes.media.forEach((items) => {
+                includes.media.forEach((items, index) => {
                     if (items.preview_image_url) {
                         items.url = items.preview_image_url
                     }
@@ -71,6 +71,6 @@ const Feed: React.FC<Feed> = (props: Feed) => {
 
 };
 
-interface Feed {}
+interface Feed { }
 
 export default Feed;

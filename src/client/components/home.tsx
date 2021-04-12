@@ -1,8 +1,9 @@
 import * as React from 'react';
 import Hero from './hero';
+import home from 
 
 
-const Home = (props: HomeProps) => {
+// Home = (props: HomeProps) => {
     return (
         <h2>Home</h2>
     )

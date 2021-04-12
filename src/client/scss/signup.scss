@@ -1,0 +1,70 @@
+/* Services
+---------------------------------*/
+
+#service {
+    padding: 60px 0px;
+    background: #CE1139;
+}
+#service h2{
+  color: #fff;
+
+}
+.service_wrapper {
+    padding: 40px 0 40px;
+}
+
+// .service_section {
+// }
+
+.service_block {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px; 
+	position: relative;
+}
+
+.service_icon {  
+    width: 90px;
+    height: 85px;
+    margin: 0px auto 25px; 
+}
+
+ 
+
+.service_icon span {
+    background: transparent; 
+    display: block;
+    height: 100%;
+    width: 100%;
+	
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.service_icon i {
+  color: #FFFFFF;
+font-size: 40px;
+margin-top: 0;
+position: relative;
+top: 20px;
+z-index: 20;
+display: block;
+text-align: center;
+}
+
+.service_block h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #fff;
+margin: 35px 0 15px; 
+}
+#service h6{
+color:#fff;
+}
+.service_block p {
+    font-size: 16px;
+    color: #fff;
+    margin: 0 0 35px 0; 
+}
+
