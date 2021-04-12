@@ -15,7 +15,7 @@ const signup = (props: signupProps) => {
                 <input className="input-btn" type="submit" value="New User/ Signup" />
                 <input className="input-btn" type="submit" value="Login" />
             </div>
-        </div>
+        </div >
 
 
 
