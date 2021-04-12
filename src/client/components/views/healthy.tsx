@@ -4,7 +4,7 @@ import * as React from 'react';
 const healthy = (props: healthyProps) => {
 return(
 
-
+<h1>Healthy</h1>
 
 
 )}

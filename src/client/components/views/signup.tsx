@@ -12,8 +12,8 @@ const signup = (props: signupProps) => {
                 <h6>Start a new journey or pickup where you left off.</h6>
 
                 <div className="form">
-                    <input className="input-text" type="text" name="" value="Your Name or E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;"/>
-                        <input className="input-text" type="text" name="" value="Your Password *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;"/>
+                    <input className="input-text" type="text" name="" value="Your Name or E-mail *" />
+                        <input className="input-text" type="text" name="" value="Your Password *" />
                             <input className="input-btn" type="submit" value="New User/ Signup"/>
                                 <input className="input-btn" type="submit" value="Login"/>
              </div>
