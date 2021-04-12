@@ -2,13 +2,14 @@ import React from 'react';
 
 
 const news = (props: newsProps) => {
-return(
+    return (
 
 
+        <h1>News</h1>
+
+)
+}
 
 
-)}
-
-
-interface  newsProps {}
+interface newsProps { }
 export default news

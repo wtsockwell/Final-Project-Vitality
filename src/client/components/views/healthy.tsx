@@ -2,13 +2,14 @@ import * as React from 'react';
 
 
 const healthy = (props: healthyProps) => {
-return(
+    return (
+
+        <h1>Healthy</h1>
 
 
+)
+}
 
 
-)}
-
-
-interface  healthyProps {}
+interface healthyProps { }
 export default healthy

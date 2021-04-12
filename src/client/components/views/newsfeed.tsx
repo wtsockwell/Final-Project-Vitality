@@ -11,7 +11,7 @@ const Feed: React.FC<Feed> = (props: Feed) => {
     This new feed needs to be reworked as certain api object properties are undefined and cannot render.
     Once we get our frontend design we can use link to pass params. 
     */
-   
+
     useEffect(() => {
         (async () => {
             try {
