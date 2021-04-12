@@ -1,6 +1,4 @@
 import React from 'react';
-// import '../scss/app.scss';
-import '../../scss/signup.scss';
 
 
 const signup = (props: signupProps) => {

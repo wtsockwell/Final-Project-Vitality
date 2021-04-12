@@ -1,7 +1,5 @@
 import * as React from 'react';
-// import '../scss/navbar.scss';
-// import '../scss/animate.scss';
-// import '../scss/animation.scss'
+
 
 const Navbar = (props: NavProps) => {
     

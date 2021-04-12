@@ -1,7 +1,4 @@
 import React, * as react from 'react';
-import '../scss/about.scss';
-import '../scss/navbar.scss';
-import '../scss/videos.scss'
 
 const videos = (props: videosProp) => {
 

@@ -1,14 +1,10 @@
 import React from 'react';
-// import '../scss/app.scss';
-// import '../scss/about.scss';
-//  import '../scss/animate.scss'
-//  import '../scss/navbar.scss';
 
 
 const About = (props: AboutProps) => {
     return (
         <div> 
-        <header id="header_wrapper">
+        {/* <header id="header_wrapper">
             <div className="container">
                 <div className="header_box">
                     <div className="logo"><a href="#vitality_blue_png"></a></div>
@@ -30,7 +26,7 @@ const About = (props: AboutProps) => {
                     </nav>
                 </div>
             </div>
-        </header>
+        </header> */}
 
 
         <div>
