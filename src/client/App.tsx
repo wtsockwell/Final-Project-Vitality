@@ -26,7 +26,7 @@ import singleevent from './components/views/singleevent';
 const App = (props: AppProps) => {
 	return (
 		<BrowserRouter>
-			<Navbar/>
+		<Navbar />
 			<Switch>
 				{/* These are the open views that you can get to directly from the navbar */}
 				<Route exact path="/" component={homepage} />
