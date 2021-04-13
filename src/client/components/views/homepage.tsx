@@ -1,9 +1,10 @@
 import React from "react";
-import "../scss/app.scss";
-import "../scss/homepage.scss";
+import {Link} from 'react-router-dom'
 
 const homepage = (props: homepageProps) => {
   return (
+      <div>
+
     <section id="hero_section" className="top_cont_outer">
       <div className="hero_wrapper">
         <div className="container">
@@ -12,17 +13,13 @@ const homepage = (props: homepageProps) => {
               <div className="col-md-12">
                 <div className="top_left_cont zoomIn wow animated">
                   <h2>
-                    Vitality<br></br>{" "}
-                    <strong>
-                      {" "}
-                      <i className="fa fa-heart"></i>{" "}
-                    </strong>
+                    Vitality<br></br>
                   </h2>
                   <h2>Creating Healthier Communities</h2>
                   <div className="underline"></div>
-                  <a href="#service" className="read_more2">
+                  <Link to="/login" className="read_more2">
                     Signup/Login
-                  </a>{" "}
+                  </Link>
                 </div>
               </div>
             </div>
@@ -30,6 +27,16 @@ const homepage = (props: homepageProps) => {
         </div>
       </div>
     </section>
+    <div className="d-flex justify-content-around flex-wrap">
+    <img src="./assets/img/pic15.png" alt=""/>
+    <img src="./assets/img/pic1.png" alt=""/>
+    <img src="./assets/img/pic10.png" alt=""/>
+    <img src="./assets/img/pic9.png" alt=""/>
+    <img src="./assets/img/pic14.png" alt=""/>
+    <img src="./assets/img/pic12.png" alt=""/>
+    </div>
+    </div>
+
   );
 };
 

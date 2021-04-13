@@ -1,6 +1,6 @@
 import {Query} from './index'
 
-const findByEmail = async (email: string) => Query(`SElECT * FROM users WHERE email = '${email}'`);
+const findByEmail = async (email: string) => Query(`SELECT * FROM users WHERE email = '${email}'`);
 
 const all = async () => Query('SELECT id, username, email, ispremmember FROM users')
 
