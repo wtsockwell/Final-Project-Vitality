@@ -31,7 +31,6 @@ const App = (props: AppProps) => {
 				<Route exact path="/" component={homepage} />
 				<Route exact path="/about" component={about} />
 				<Route exact path="/feed" component={feed} />
-				<Route exact path="/news" component={news} />
 				<Route exact path="/videos" component={newvideos} />
 				<Route exact path="/healthier_you" component={healthy} />
 
