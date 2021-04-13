@@ -22,8 +22,8 @@ const login = () => {
                 password: password,
             }
 
-            let r = await fetch('/api/users', {
-                method: 'GET',
+            let r = await fetch('/login', {
+                method: 'POST',
                 headers:{
                     'Content-Type':'application/json'
                 },
@@ -36,6 +36,7 @@ const login = () => {
     }
 
     return(
+        /*As of now we are login in user with there email and password will work code out to work with username*/
         <div className="container">
             <form>
                 <div className="form-group">

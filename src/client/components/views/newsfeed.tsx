@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { ReactEventHandler, useEffect, useState } from 'react';
+import FadeIn from 'react-fade-in';
 import { Link, BrowserRouter, RouteComponentProps } from 'react-router-dom';
 import { couldStartTrivia, isTemplateSpan } from 'typescript';
 
 
 const Feed: React.FC<Feed> = (props: Feed) => {
     const [tweet, setTweet] = useState([])
+    const [tweetUrl, setUrl] = useState('')
 
 
     /*This useEffect is used to connect to the twitter.ts api located in routes/twitter. 
@@ -15,67 +17,96 @@ const Feed: React.FC<Feed> = (props: Feed) => {
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch(`api/news/${105242077}`)
+                const res = await fetch(`api/news/${tweetUrl}`)
                 let { includes, data } = await res.json()
                 includes.media.forEach((items, index) => {
                     if (items.preview_image_url) {
                         items.url = items.preview_image_url
+
                     }
-                    if (items.public_metrics == undefined) {
-                        items.public_metrics = { view_count: 'Not Available' }
+                    if (!items.public_metrics) {
+                        items.public_metrics = { view_count: '0' }
                     }
                 })
-
                 data.forEach((item, index) => {
                     item.user = includes.users[0]
                     item.media = includes.media[index]
+                    if (!item.media) {
+                        try {
+                            item.media = { url: item.user.profile_image_url, public_metrics: { view_count: '0' } }
+                        } catch (error) {
+                            console.log(error)
+                        }
+                    }
                 })
-                console.log(data)
                 setTweet(data)
 
             } catch (err) {
                 console.log(err)
             }
-
         })();
-    }, []);
+    }, [tweetUrl]);
+    const ClickToWHF = ()=>{
+        setUrl('83809282')
+
+    };
+/*reworking this sectio of logic*/
+    // const ClickToESC = ()=>{
+    //     setUrl('2157252')
+
+    // };
+
+    const ClickToAHA = ()=>{
+        setUrl('105242077')
+
+    };
+
+   
 
     return (
         <React.Fragment>
             <section className="py-5 text-center container">
                 <div className="row py-lg-5">
                     <div className="col-lg-6 col-md-8 mx-auto">
-                        <h1 className="fw-light">Album example</h1>
-                        <p className="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-                        <p>
-                            <a href="#" className="btn btn-primary my-2">Main call to action</a>
-                            <a href="#" className="btn btn-secondary my-2">Secondary action</a>
-                        </p>
+                        <h1 className="fw-light">Dynamic News Feed </h1>
+                        <p className="lead text-muted">Our news feed aggregates the latest Tweets from today's leading <i
+                            className="bi bi-heart-fill text-danger"
+                            style={{ fontSize: `1em` }}
+                        ></i> research institutions </p>
+                        <h4>Select your source</h4>
+                        <button className='btn btn-outline-dark mr-3' onClick={ClickToWHF}>World Heart Federation</button>                        
+                        <button className='btn btn-outline-dark ml-3' onClick={ClickToAHA}>American Heart Association</button>
+
+
                     </div>
                 </div>
             </section>
-            <main className="container">
-                <div className="my-3 p-3 bg-body rounded shadow-sm">
+
+            {/* These can be changed if we want to use something different than a card view, this was just simple because of the previous labs */}
+            <div className="container mt-3 justify-content-between">
+                <div className='d-flex justify-content-center'>
+                </div>
+                
+                <div className="row">
                     {tweet.map(item => (
-                        <div className="d-flex text-muted pt-3 mb-1" key={`unique-${item.id}`}>
-                            <img src={item.media.url} alt={item.text} style={{ height: '5em', width: '5em' }} />
-                            <div className="pb-3 mb-0 ml-1 small lh-sm border-bottom w-100">
+
+                        <div key={`itempost#${item.id}`} className="col-4">
+                            <div className="card my-2">
+                                <a href={`https://twitter.com/${item.user.username}/status/${item.id}`}><img src={item.media.url} alt={item.text} style={{ height: '20vh', width: '50vw' }} /></a>
                                 <div className="d-flex justify-content-between">
-                                    <small className="text-gray-dark"><span className='text-dark'>Views:</span> {item.media.public_metrics.view_count}</small>
-                                    <a className='text-danger' href={`https://twitter.com/American_Heart/status/${item.id}`}>Visit <img src={item.user.profile_image_url} style={{ height: '2em', width: '2em' }} /></a>
+                                    <small className="text-gray-dark"><span className='text-dark ml-3 mt-3'>Views:</span> {item.media.public_metrics.view_count}</small>
                                 </div>
-                                <span className="d-block">Source: {item.user.name}</span>
-                                <span className='d-block'>Text:{item.text.slice(0, 100)}.....</span>
+                                <div className="card-body">
+                                    <small className="card-title"><img src={item.user.profile_image_url} style={{ height: '2em', width: '2em' }} />{item.user.name}</small>
+                                    <p className="text-muted">{item.text.slice(0, 110)}</p>
+                                </div>
                             </div>
                         </div>
-
+                        
                     ))}
-
-                    <small className="d-block text-end mt-3">
-                        <a href="#">All suggestions</a>
-                    </small>
                 </div>
-            </main>
+                
+            </div>
 
 
         </React.Fragment>

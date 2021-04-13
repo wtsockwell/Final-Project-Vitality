@@ -37,19 +37,19 @@ const App = (props: AppProps) => {
 				{/* These are the paths for creating and posting to the DB */}
 				<Route exact path="/signup" component={signup} />
 				<Route exact path="/login" component={login} />
-				<Route exact path="/post/blog" component={blogpost} />
+				{/* <Route exact path="/post/blog" component={blogpost} />
 				<Route exact path="/post/recipe" component={recipepost} />
-				<Route exact path="/post/event" component={eventpost} />
+				<Route exact path="/post/event" component={eventpost} /> */}
 
 				{/* These are the paths for viewing individual pages from the DB */}
-				<Route exact path="/view/blogs/:id?" component={singleblog} />
+				{/* <Route exact path="/view/blogs/:id?" component={singleblog} />
 				<Route exact path="/view/recipe/:id?" component={singlerecipe} />
-				<Route exact path="/view/event/:id?" component={singleevent} />
+				<Route exact path="/view/event/:id?" component={singleevent} /> */}
 
 				{/* These are the admin paths for the posts */}
-				<Route exact path="/admin/blogs/:id?" component={} />
+				{/* <Route exact path="/admin/blogs/:id?" component={} />
 				<Route exact path="/admin/recipe/:id?" component={} />
-				<Route exact path="/admin/event/:id?" component={} />
+				<Route exact path="/admin/event/:id?" component={} /> */}
 			</Switch>
 		</BrowserRouter>
 	);
