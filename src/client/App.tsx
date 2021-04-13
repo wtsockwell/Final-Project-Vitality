@@ -8,7 +8,6 @@ import homepage from './components/views/homepage';
 import about from './components/about';
 import videos from './components/views/Videos';
 import newvideos from './components/views/Video_page';
-import news from './components/views/latestnews';
 import feed from './components/views/newsfeed';
 import healthy from './components/views/healthy';
 
@@ -32,7 +31,6 @@ const App = (props: AppProps) => {
 				<Route exact path="/" component={homepage} />
 				<Route exact path="/about" component={about} />
 				<Route exact path="/feed" component={feed} />
-				<Route exact path="/news" component={news} />
 				<Route exact path="/videos" component={newvideos} />
 				<Route exact path="/healthier_you" component={healthy} />
 
