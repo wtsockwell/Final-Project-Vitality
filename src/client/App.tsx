@@ -8,7 +8,6 @@ import homepage from './components/views/homepage';
 import about from './components/about';
 import videos from './components/views/Videos';
 import newvideos from './components/views/Video_page';
-import news from './components/views/latestnews';
 import feed from './components/views/newsfeed';
 import healthy from './components/views/healthy';
 
@@ -26,7 +25,7 @@ import singleevent from './components/views/singleevent';
 const App = (props: AppProps) => {
 	return (
 		<BrowserRouter>
-			<Navbar/>
+		<Navbar />
 			<Switch>
 				{/* These are the open views that you can get to directly from the navbar */}
 				<Route exact path="/" component={homepage} />

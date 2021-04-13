@@ -103,6 +103,7 @@ const healthy = (props: healthyProps) => {
     )
 }
 
+interface Feed { }
 
 interface healthyProps { }
 
