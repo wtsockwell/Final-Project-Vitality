@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from './navbar';
 
 
 const About = (props: AboutProps) => {
@@ -30,6 +31,7 @@ const About = (props: AboutProps) => {
 
 
         <div>
+
 
             <section id="aboutUs">
                 <div className="inner_wrapper aboutUs-container fadeInLeft animated wow">
