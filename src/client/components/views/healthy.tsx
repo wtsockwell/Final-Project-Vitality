@@ -5,9 +5,27 @@ import { Link } from 'react-router-dom'
 
 const healthy = (props: healthyProps) => {
 
-    const [blogs, setBlogs] = useState([])
-    const [recipes, setRecipes] = useState([])
-    const [events, setEvents] = useState([])
+    const [blogs, setBlogs] = useState([{
+        title:"First blog post",
+        user:"Taylor",
+        content:"This is the first blog post for our website, and we are excited to show off the capabilities of this user driven portal.",
+        id:1
+    }])
+    const [recipes, setRecipes] = useState([{
+        title:"Fresh Cookies",
+        user: "Larry",
+        description:"Fresh homemade cookies that are still good for the heart",
+        ingredients:["oats","sugar","cocoa","peanutbutter"],
+        content:"Mix ingredients together in a pot, stir until mixed, place on wax paper to cool",
+        id:1
+    }])
+    const [events, setEvents] = useState([{
+        title:"Afternoon Jog",
+        user:"Jacob",
+        eventtime:"April 16th, 2021",
+        description:"A group jog around the park, starting at 4pm",
+        id:1
+    }])
 
     const getBlogs = async () => {
         let r = await fetch('/api/blogs')
