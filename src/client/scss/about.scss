@@ -1,0 +1,219 @@
+fieldset {
+	width: 300px;
+	margin: 25px 0 0 50px;
+	border: 1px solid #999999;
+	box-shadow: 1px 1px #cccccc;
+	padding: 10px;
+}
+
+label {
+	float: left;
+	width: 140px;
+	display: block;
+	clear: left;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 10px;
+}
+
+button {
+	margin-left: 150px;
+}
+
+input {
+	margin-top: 10px;
+	display: block;
+	text-align: right;
+	width: 128px;
+}
+
+
+#bmi_label {
+	width: 200px;
+}
+
+#bmi {
+	width: 66px;
+}
+
+#intro {
+	width: 300px;
+	margin: 25px 0 0 50px;
+	padding: 10px;
+	border: 1px solid #999999;
+	box-shadow: 1px 1px #cccccc;
+}
+
+ 
+.aboutUs-container {
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto 100%;
+    background-position-y: 70px;
+    }
+    #about-us .read-more{
+        border: 1px solid #ED5441;
+        color: #1a1a1a;
+    }
+    
+    #about-us .read-more:hover{
+        background-color: #e25c02;
+        border: 1px solid #e74c3c;
+        color: #fff;
+    }
+    .about-us-post-container{
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: auto 100%;
+    }
+    .about-us{
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+    .about-us h3{
+        font-size:28px;
+    }
+    .points{ 
+        margin-bottom: 10px;
+        font-size:25px;
+        padding-left:0px;
+        
+    }
+    .about-us p{
+        /*font-size: 0.9375em;*/
+        line-height: 1.625em;
+        padding: 15px 0;
+    }
+    .about-us .about-us-list{
+        list-style: none;
+        margin-bottom: 20px;
+        padding-left:0px;
+    }
+    
+    .about-us .points{
+        position: relative;
+        list-style-type: none;
+        padding: 5px 0 5px 30px;
+    }
+    
+    .about-us .points:before{
+        content: "\f058";
+        position: absolute;
+        font-family: FontAwesome;
+        font-size: 1.125em;
+        color: #CE1139;
+        left: 0px;
+        top: 3px;
+    }
+    
+    .about-us-link a:first-child{
+        margin-left: 0;
+    }
+
+
+    /* Nav Styles
+---------------------------------*/
+.navbar-inverse {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar {
+    min-height: 40px;
+    margin-bottom: 0px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #222;
+}
+
+.navStyle {
+    float: right;
+}
+
+.navStyle ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.navStyle ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+// .navStyle ul li:first-child {
+// 	/*margin:0px;*/
+// }
+
+.navStyle ul li:last-child {
+    margin: 0 0 0 23px;
+}
+
+.navStyle ul li a {
+    display: block;
+    font-size: 14px;
+    color: #222222;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.navStyle ul li a:hover {
+    color: #ED5441;
+}
+
+.navStyle > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    color: #ED5441;
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #CA133A;
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #e25c02;
+    background-color: transparent;
+}
+
+.navStyle > li.active > a,
+.navStyle > li.active > a:hover {
+    text-decoration: none;
+    color: #ED5441;
+    background-color: transparent;
+}
+
+.borderLeft {
+    border-left: 1px solid #DADADA;
+}
+
+.borderTop {
+    margin-top: 30px;
+    border-top: 1px solid #DADADA;
+}
+
+.mrgTop {
+    margin-top: 30px;
+}
+
+    .about_img{ height: 350px;
+        width: 1200px;
+        adjust: content center
+        
+        
+    }
+
+    .center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+
