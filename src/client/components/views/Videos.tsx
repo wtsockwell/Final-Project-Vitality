@@ -49,7 +49,7 @@ const videos = (props: videosProp) => {
           </ul>
         </div>
 
-        <div className="isotope fadeInLeft animated wow grid" style={{ position: "relative", overflow: "hidden", height: "480px" }} id="portfolio_wrapper"> </div>
+        <div className="isotope fadeInLeft animated wow grid"  id="portfolio_wrapper"> </div>
 
         <figure className="portfolio-item one-four videoCard  appleIOS isotope-item effect-oscar">
 
