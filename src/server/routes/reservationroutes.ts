@@ -4,7 +4,7 @@ import { ReqUser } from './userroutes';
 
 const router = express.Router()
 
-export const isAdmin = (req: ReqUser, res, next) => {
+export const isPrem = (req: ReqUser, res, next) => {
     if (req.user) {
         try {
             let [user] = req.user

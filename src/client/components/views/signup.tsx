@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {useState} from "react"
 import {Link,RouteComponentProps,useHistory} from 'react-router-dom'
 
@@ -24,6 +24,9 @@ const signup = (props: signupProps) => {
             setPrem(0)
         }
     }
+    
+
+   
 
     const createUser = async () => {
         try {
@@ -41,11 +44,11 @@ const signup = (props: signupProps) => {
                 },
                 body: JSON.stringify(user)
             })
+            console.log('hello')
         } catch (error) {
             console.log(error)
         }
 
-        props.history.push('/')
 
     }
     return (

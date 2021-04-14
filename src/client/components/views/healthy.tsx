@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, RouteComponentProps } from 'react-router-dom';
 
 
 const healthy = (props: healthyProps) => {
@@ -9,10 +9,11 @@ const healthy = (props: healthyProps) => {
     const [recipes, setRecipes] = useState([])
     const [events, setEvents] = useState([])
 
+
     const getBlogs = async () => {
         let r = await fetch('/api/blogs')
-        let blog = await r.json()
-        setBlogs(blog)
+        let res = await r.json()
+        setBlogs(res)
     }
     const getRecipe = async () => {
         let r = await fetch('/api/recipes')
@@ -24,6 +25,9 @@ const healthy = (props: healthyProps) => {
         let event = await r.json()
         setEvents(event)
     }
+
+    getBlogs()
+   
 
     // useEffect(() => { getBlogs(), getRecipe(), getEvent() }, [])
     // The above line is commented out due to me not having the updated Database, but once a database is available it will work
@@ -105,6 +109,6 @@ const healthy = (props: healthyProps) => {
 
 interface Feed { }
 
-interface healthyProps { }
+interface healthyProps extends RouteComponentProps { }
 
 export default healthy

@@ -11,10 +11,9 @@ router.post("/", async (req, res, next) => {
     try {
         let premstatus = 0
         user.password = Hashpassword(req.body.password);
-        if (user.ispremmember == undefined) {
+        if (user.ispremmember == 0) {
             premstatus = 1
         } else { premstatus = 0 }
-        console.log(premstatus)
         let result:Result = await DB.users.post(
             user.email,
             user.username,
