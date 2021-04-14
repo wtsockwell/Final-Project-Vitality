@@ -21,8 +21,11 @@ const About = (props: AboutProps) => {
                                 Our purpose:
                             </h1>
                             <br />
-                            <h3 className="row-md-6 content centered" >Vitality seeks to build stronger and more informed communities by providing an interface were users can register for upcoming group fitness activities,
-                         view interactive videos,locate healthier food choices,and ultimately utilize the information provided to curate the most fullfilling life possible for each individual user.</h3>
+                            <h3 className="row-md-6 content centered" >Our mission at Vitality is to create a world free of heart disease. According to the Top 10 Leading
+                    Causes of Death in the United States, Heart Disease is the #1 cause of death followed by Cancer,
+                    Unintentional Injuries, Respiratory Diseases, Stroke, Alzheimer's Disease, Diabetes, etc. Vitality
+                    was developed to address one of the world most pressing issue's: heart disease. Vitality builds stronger and informed communities by providing an interface were users can register
+                    for upcoming group fitness activities, view interactive videos and locate healthier food choices.</h3>
                             {/* <ul className="about-us-list content align left">
                             <li className="points">To provide the knowledge needed to create and maintain a lifestyle where risk of heart disease is at a minimum.</li>
                             
@@ -49,20 +52,20 @@ const About = (props: AboutProps) => {
                                 <li className="points">Abnormal heart rhythms or arrhythmia</li>
                             </ul>
 
-                            <br />
-
+                        {/*
                             <h1 className="row-md-6 content centered"> How to Lower The Risk</h1>
                             <h4 className="row-md-6 content centered">Though this isn't a direct cure for the many forms of the disease</h4>
                             <h4 className="row-md-6 content centered">there's still many provisions to be taken, such as:
                         Healthier alternatives for Food and Drinks, Managing a Healthy Weight, Getting Regular Physical Activity, and Avoiding habits that may lead to greater risks such as Smoking</h4>
                             <br />
+                        */}
 
                             <section id="about">
 
         <div className="inner wrapper posts-container fadeInLeft animated wow">
 
             <div className="container">
-
+                {/*
                 <h2>What is Vitality?</h2>
 
                 <p> Our mission at Vitality is to create a world free of heart disease. According to the Top 10 Leading
@@ -70,15 +73,16 @@ const About = (props: AboutProps) => {
                     Unintentional Injuries, Respiratory Diseases, Stroke, Alzheimer's Disease, Diabetes, etc. Vitality
                     is an App developed to address one of the world most pressing issue's: heart disease. Vitality builds stronger and informed communities by providing an interface were users can register
                     for upcoming group fitness activities, view interactive videos and locate healthier food choices.
-                </p>
+                    </p>
+                    */}
 
                 <div className="inner section">
                     <div className="row">
                         <div className="col-lg-12 about-us">
                             <div className="row">
-                                <div className="col-md-6">
+                                <div className="row-md-6 content centered">
 
-                                    <h3>What Is Heart Disease?</h3>
+                                    <h1>What Is Heart Disease?</h1>
 
                                     <p>
                                         The term "<b>heart disease</b>" refers to several types of heart conditions. The most
@@ -87,7 +91,7 @@ const About = (props: AboutProps) => {
                                         a heart attack.
                                     </p>
 
-                                    <h3>What Are The Symptoms?</h3>
+                                    <h1>What Are The Symptoms?</h1>
 
                                     <p>
                                         Sometimes heart disease may be "silent" and not diagnosed until a person
@@ -110,7 +114,9 @@ const About = (props: AboutProps) => {
                                         ankles, legs, abdomen, or neck veins.
                                         </li>
 
-                                    <h3>What Are The Risk Factors for Heart Disease?</h3>
+                                        <br></br>
+
+                                    <h1>What Are The Risk Factors for Heart Disease?</h1>
 
                                     <p>
                                         <b>High blood pressure</b>, <b>high blood cholesterol</b> and <b>smoking</b> are key risk factors
@@ -128,11 +134,13 @@ const About = (props: AboutProps) => {
                                         <li>Physical Inactivity</li>
 
                                         <li>Excessive Alcohol Use</li>
-                        
-                                    <h3>How Does it Affect Men?</h3>
+
+                                        <br></br>
+
+                                    <h1>How Does it Affect Men?</h1>
 
                                         <li>
-                                        Heart Disease is the leading cause of death for men in the United
+                                        <b>Heart Disease</b> is the leading cause of death for men in the United
                                         States, killing 357,761 men in 2019--that's about 1 in every 4 male deaths.
                                         </li>
 
@@ -144,8 +152,8 @@ const About = (props: AboutProps) => {
                                         </li>
 
                                         <li>
-                                        About 1 in 13 (7.7%) white men and 1 in 14 (7.1%) black men have coronary
-                                        heart disease. About 1 in 17 (5.9%) Hispanic men have coronary heart
+                                        <b>About 1 in 13</b> (7.7%) white men and <b>1 in 14</b> (7.1%) black men have coronary
+                                        heart disease. About <b>1 in 17</b> (5.9%) Hispanic men have coronary heart
                                         disease.
                                         </li>
 
@@ -155,72 +163,78 @@ const About = (props: AboutProps) => {
                                         disease.
                                         </li>
                                     
-                                    <h3>How Does it Affect Women?</h3>
+                                        <br></br>
+
+                                    <h1>How Does it Affect Women?</h1>
                         
                                         <li>
-                                        Heart disease is the leading cause of death for women in the United States,
+                                        <b>Heart disease</b> is the leading cause of death for women in the United States,
                                         killing 299,578 women in 2017—or about 1 in every 5 female deaths.
                                         </li>
 
                                     <li>
-                                        Heart disease is the leading cause of death for African American and white
+                                        <b>Heart disease</b> is the leading cause of death for African American and white
                                         women in the United States. Among American Indian and Alaska Native women,
                                         heart disease and cancer cause roughly the same number of deaths each year.
                                         For Hispanic and Asian or Pacific Islander women, heart disease is second
-                                        only to cancer as a cause of death.
+                                        only to <b>cancer</b> as a cause of death.
                                         </li>
 
                                     <li>
-                                        About 1 in 16 women age 20 and older (6.2%) have coronary heart disease, the
+                                        <b>About 1 in 16</b> women age 20 and older (6.2%) have coronary heart disease, the
                                         most common type of heart disease.
                                         </li>
 
                                     <li>
-                                        About 1 in 16 white women (6.1%), black women (6.5%), and Hispanic women
+                                        <b>About 1 in 16 </b>white women (6.1%), black women (6.5%), and Hispanic women
                                         (6%)
                                         </li>
 
                                     <li>
-                                        About 1 in 30 Asian women (3.2%)
+                                        <b>About 1 in 30</b> Asian women (3.2%)
                                         </li>
                                     
-                                    <h3>What Can You Do to Lower Your Risk of Heart Disease?</h3>
+                                    <br></br>
+
+                                    <h1>What Can You Do to Lower Your Risk of Heart Disease?</h1>
 
                                         <li>
-                                        Know your blood pressure. Having uncontrolled blood pressure can result in
+                                        <b>Know your blood pressure</b>. Having uncontrolled blood pressure can result in
                                         heart disease. High blood pressure has no symptoms so it's important to have
                                         your blood pressure checked regularly.
                                         </li>
 
                                     <li>
-                                        Talk to your health care provider about whether you should be tested for
+                                        <b>Talk to your health care provider</b> about whether you should be tested for
                                         diabetes. Having diabetes raises your risk of heart disease.
                                         </li>
 
                                     <li>
-                                        Quit smoking. If you don't smoke, don't start. If you do smoke, learn ways
+                                        <b>Quit smoking</b>. If you don't smoke, don't start. If you do smoke, learn ways
                                         to quit.
                                         </li>
 
                                     <li>
-                                        Discuss checking your cholesterol and triglyceride levels with your health
+                                        <b>Discuss checking your cholesterol and triglyceride levels</b> with your health
                                         care provider.
                                         </li>
 
                                     <li>
-                                        Make healthy food. Having overweight or obesity raises your risk of heart
+                                        <b>Make healthy food</b>. Having overweight or obesity raises your risk of heart
                                         disease.
                                         </li>
 
                                     <li>
-                                        Limit alcohol intake to one drink a day.
+                                        <b>Limit alcohol intake</b> to one drink a day.
                                         </li>
 
                                     <li>
-                                        Lower your stress level and find healthy ways to cope with stress.
+                                        <b>Lower your stress level</b> and find healthy ways to cope with stress.
                                         </li>
 
-                                    <h3>What Does Vitality Provide?</h3>
+                                    <br></br>
+
+                                    <h1>What Does Vitality Provide?</h1>
 
                                     <p>
                                         Vitality provides our users information about:
