@@ -21,6 +21,10 @@ import singleblog from './components/views/singleblog';
 import singlerecipe from './components/views/singlerecipe';
 import singleevent from './components/views/singleevent';
 
+import editBlog from './components/views/adminblog'
+import editEvent from './components/views/adminevent';
+import editRecipe from './components/views/adminrecipe';
+
 /* HOOK REACT EXAMPLE */
 const App = (props: AppProps) => {
 	return (
@@ -47,9 +51,9 @@ const App = (props: AppProps) => {
 				<Route exact path="/view/event/:id?" component={singleevent} />
 
 				{/* These are the admin paths for the posts */}
-				<Route exact path="/admin/blogs/:id?" component={} />
-				<Route exact path="/admin/recipe/:id?" component={} />
-				<Route exact path="/admin/event/:id?" component={} />
+				<Route exact path="/admin/blogs/:id?" component={editBlog} />
+				<Route exact path="/admin/recipe/:id?" component={editEvent} />
+				<Route exact path="/admin/event/:id?" component={editRecipe} />
 			</Switch>
 		</BrowserRouter>
 	);

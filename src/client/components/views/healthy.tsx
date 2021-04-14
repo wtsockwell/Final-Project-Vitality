@@ -66,6 +66,9 @@ const healthy = (props: healthyProps) => {
             <div className="tab-content" id="myTabContent">
                 <div className="tab-pane fade show active" id="Blogs" role="tabpanel" aria-labelledby="Blogs-tab">
                     {/* These can be changed if we want to use something different than a card view, this was just simple because of the previous labs */}
+                    <div className="container">
+                        <Link to="/post/blog" className="btn btn-primary">Tell us your story</Link>
+                    </div>
                     <div className="container mt-3 justify-content-between" id="blogs">
                         {blogs.map(blog => (
                             <div key={`Blogpost#${blog.id}`} className="col-4">
@@ -82,6 +85,9 @@ const healthy = (props: healthyProps) => {
                     </div>
                 </div>
                 <div className="tab-pane fade" id="Recipies" role="tabpanel" aria-labelledby="Recipies-tab">
+                <div className="container">
+                        <Link to="/post/recipe" className="btn btn-primary">What's Cookin?</Link>
+                    </div>
                     <div className="container mt-3 justify-content-between" id="recipies">
                         {recipes.map(recipe => (
                             <div key={`Recipepost#${recipe.id}`} className="col-4">
@@ -98,6 +104,9 @@ const healthy = (props: healthyProps) => {
                     </div>
                 </div>
                 <div className="tab-pane fade" id="Events" role="tabpanel" aria-labelledby="Events-tab">
+                <div className="container">
+                        <Link to="/post/event" className="btn btn-primary">Let's Get Together</Link>
+                    </div>
                     <div className="container mt-3 justify-content-between" id="events">
                         {events.map(event => (
                             <div key={`Eventpost#${event.id}`} className="col-4">
