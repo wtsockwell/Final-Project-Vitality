@@ -1,10 +1,29 @@
 import * as express from 'express';
 import * as fetch from 'isomorphic-fetch';
 import * as dotevn from 'dotenv'
+import { ReqUser } from './userroutes';
 
 const router = express.Router();
 dotevn.config()
 
+export const isPrem = (req: ReqUser, res, next) => {
+    console.log(req.user)
+    if (req.user) {
+        try {
+            let [user] = req.user
+            if (user.ispremmember == 0) {
+                return res.sendStatus(401)
+            } else {
+                return next()
+            }
+        } catch (error) {
+            res.send(error)
+        }
+    } else if (!req.user) {
+        console.log("next")
+        res.sendStatus(401)
+    }
+};
 
 router.get('/worldheartfederation', async (req, res, next) => {
     try {
@@ -25,7 +44,7 @@ router.get('/worldheartfederation', async (req, res, next) => {
 
 router.get('/news/:id', async (req, res, next) => {
     try {
-        let response = await fetch(`https://api.twitter.com/2/users/${req.params.id}/tweets?max_results=6&expansions=attachments.media_keys,author_id&media.fields=height,media_key,preview_image_url,public_metrics,type,url,width&user.fields=profile_image_url,location&tweet.fields=created_at,source`, {
+        let response = await fetch(`https://api.twitter.com/2/users/${req.params.id}/tweets?max_results=12&expansions=attachments.media_keys,author_id&media.fields=height,media_key,preview_image_url,public_metrics,type,url,width&user.fields=profile_image_url,location&tweet.fields=created_at,source`, {
             headers: {
                 Authorization: `Bearer ${process.env.TW_Bearer}`
             }
@@ -49,7 +68,6 @@ router.get('/europeansocietyofcardiology', async (req, res, next) => {
         });
 
         const data = await response.json()
-        console.log('test')
         res.json(data)
 
     } catch (error) {

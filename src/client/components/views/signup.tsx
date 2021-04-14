@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {useState} from "react"
-import {Link} from 'react-router-dom'
+import {Link,RouteComponentProps,useHistory} from 'react-router-dom'
 
 const signup = (props: signupProps) => {
     const [username, setUsername] = useState("");
@@ -24,6 +24,9 @@ const signup = (props: signupProps) => {
             setPrem(0)
         }
     }
+    
+
+   
 
     const createUser = async () => {
         try {
@@ -34,17 +37,19 @@ const signup = (props: signupProps) => {
                 ispremmember: prem
             }
 
-            let r = await fetch('/api/users', {
+            let r = await fetch('/register', {
                 method: 'POST',
                 headers:{
                     'Content-Type':'application/json'
                 },
                 body: JSON.stringify(user)
             })
-            // history push to confirmation page
+            console.log('hello')
         } catch (error) {
             console.log(error)
         }
+
+
     }
     return (
 
@@ -88,6 +93,6 @@ const signup = (props: signupProps) => {
 };
 
 
-interface signupProps { }
+interface signupProps extends RouteComponentProps { }
 
 export default signup;

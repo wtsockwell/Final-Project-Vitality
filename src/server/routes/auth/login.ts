@@ -13,7 +13,7 @@ router.post(
       let token = await CreateToken({ userid: req.user.id });
       res.json({
         token,
-        role: req.user.role,
+        ispremmember: req.user.ispremmember,
         userid: req.user.id,
       });
     } catch (error) {
