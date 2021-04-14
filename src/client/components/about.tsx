@@ -13,8 +13,8 @@ const About = (props: AboutProps) => {
                             <br />
                             <h3 className="row-md-6 content centered" >    That is the goal we strive to achieve with the creation of Vitality.</h3>
                             <br />
-                            <h3 className="row-md-6 content centered">  Cardio vascular disease, more commonly known as Heart disease, is one of the most pressing health tragedies in modern human life. An average of 647,000 Americans die from heart disease(1 out of every 4 US deaths)
-                                on a yearly basis, making it the leading cause of death in the United States.</h3>
+                            <h3 className="row-md-6 content centered">  <b>Cardiovascular Disease</b>, more commonly known as <b>Heart Disease</b>, is one of the most pressing health tragedies in modern human life. <b>An average of 647,000 Americans die from heart disease (1 out of every 4 US deaths)
+                                on a yearly basis</b>, making it the <b>#1 leading cause of death in the United States</b>.</h3>
                             <br />
                             <br />
                             <h1 className="row-md-6 content centered">
