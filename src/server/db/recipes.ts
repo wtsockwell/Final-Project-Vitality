@@ -1,6 +1,6 @@
 import { Query } from './index'
 
-const all = async () => Query('SELECT title, description, u.username as user FROM recipes r JOIN users u ON u.id= r.userid')
+const all = async () => Query('SELECT r.id, title, description, u.username as user FROM recipes r JOIN users u ON u.id= r.userid')
 
 const one = async (id: string) => Query('SELECT title, ingredients, content, u.username FROM recipes r JOIN users u ON u.id = r.userid WHERE r.id=?', [id])
 

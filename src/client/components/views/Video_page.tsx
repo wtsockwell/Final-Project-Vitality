@@ -3,13 +3,13 @@ import React, { useEffect } from 'react'
 const Video_page = (props: Video_Page) => {
 
 
-        useEffect(()=>{
-            let UserIspremmember = localStorage.getItem('ispremmember');
-            if(UserIspremmember==null||undefined||0){
-                props.history.push('/login')  
-                console.log(UserIspremmember)    
-            }
-        },[])
+        // useEffect(()=>{
+        //     let UserIspremmember = localStorage.getItem('ispremmember');
+        //     if(UserIspremmember==null||undefined||0){
+        //         props.history.push('/login')  
+        //         console.log(UserIspremmember)    
+        //     }
+        // },[])
 
     return (
         <div>

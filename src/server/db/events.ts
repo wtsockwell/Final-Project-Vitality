@@ -4,7 +4,7 @@ import {Query} from './index'
 
 const all = async () => Query('SELECT e.title, e.description,date_format(e.eventtime, "%M %d %Y"),e.id, u.username as user FROM events e JOIN users u on u.id=e.userid')
 
-const one = async (id:string) => Query('SELECT e.title, e.description, date_format(e.eventtime, "%M %d %Y"), e.id, u.username as user FROM events e JOIN users u ON u.id=e.userid where id=?',[id])
+const one = async (id:string) => Query('SELECT e.title, e.description, date_format(e.eventtime, "%M %d %Y"), e.id, u.username as user FROM events e JOIN users u ON u.id=e.userid where e.id=?',[id])
 
 const post = async (title:string,description:string,eventtime:string, userid:string) => Query('INSERT INTO events(title,description,eventtime, userid) VALUES(?,?,?,?)',[title,description,eventtime, userid])
 

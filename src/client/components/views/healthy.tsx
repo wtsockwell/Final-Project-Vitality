@@ -44,10 +44,10 @@ const healthy = (props: healthyProps) => {
         setEvents(event)
     }
 
-    getBlogs()
+    // getBlogs()
    
 
-    // useEffect(() => { getBlogs(), getRecipe(), getEvent() }, [])
+    useEffect(() => { getBlogs(), getRecipe(), getEvent() }, [])
     // The above line is commented out due to me not having the updated Database, but once a database is available it will work
 
     return (
@@ -73,7 +73,7 @@ const healthy = (props: healthyProps) => {
                     <div className="container">
                         <Link to="/post/blog" className="btn btn-primary">Tell us your story</Link>
                     </div>
-                    <div className="container mt-3 justify-content-between" id="blogs">
+                    <div className="container mt-3 justify-content-between d-flex flex-wrap" id="blogs">
                         {blogs.map(blog => (
                             <div key={`Blogpost#${blog.id}`} className="col-4">
                                 <div className="card my-2">
@@ -92,7 +92,7 @@ const healthy = (props: healthyProps) => {
                 <div className="container">
                         <Link to="/post/recipe" className="btn btn-primary">What's Cookin?</Link>
                     </div>
-                    <div className="container mt-3 justify-content-between" id="recipies">
+                    <div className="container mt-3 justify-content-between d-flex flex-wrap" id="recipies">
                         {recipes.map(recipe => (
                             <div key={`Recipepost#${recipe.id}`} className="col-4">
                                 <div className="card my-2">
@@ -111,7 +111,7 @@ const healthy = (props: healthyProps) => {
                 <div className="container">
                         <Link to="/post/event" className="btn btn-primary">Let's Get Together</Link>
                     </div>
-                    <div className="container mt-3 justify-content-between" id="events">
+                    <div className="container mt-3 justify-content-between d-flex flex-wrap" id="events">
                         {events.map(event => (
                             <div key={`Eventpost#${event.id}`} className="col-4">
                                 <div className="card my-2">
