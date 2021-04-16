@@ -15,6 +15,7 @@ router.post(
         token,
         ispremmember: req.user.ispremmember,
         userid: req.user.id,
+        username: req.user.username
       });
     } catch (error) {
       console.log(error);

@@ -24,6 +24,7 @@ import singleevent from './components/views/singleevent';
 import editBlog from './components/views/adminblog'
 import editEvent from './components/views/adminevent';
 import editRecipe from './components/views/adminrecipe';
+import BMI from './components/views/bmi';
 
 /* HOOK REACT EXAMPLE */
 const App = (props: AppProps) => {
@@ -40,6 +41,8 @@ const App = (props: AppProps) => {
 
 				{/* These are the paths for creating and posting to the DB */}
 				<Route exact path="/signup" component={signup} />
+				<Route exact path="/bmi" component={BMI} />
+
 				<Route exact path="/login" component={login} />
 				<Route exact path="/post/blog" component={blogpost} />
 				<Route exact path="/post/recipe" component={recipepost} />

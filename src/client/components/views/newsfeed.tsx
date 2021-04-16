@@ -70,10 +70,7 @@ const Feed: React.FC<Feed> = (props: Feed) => {
                 <div className="row py-lg-5">
                     <div className="col-lg-6 col-md-8 mx-auto">
                         <h1 className="fw-light">Dynamic News Feed </h1>
-                        <p className="lead text-muted">Our news feed aggregates the latest Tweets from today's leading <i
-                            className="bi bi-heart-fill text-danger"
-                            style={{ fontSize: `1em` }}
-                        ></i> research institutions </p>
+                        <p className="lead text-muted">Our news feed aggregates the latest Tweets from today's leading heart research institutions </p>
                         <h4>Select your source</h4>
                         <div className="d-flex">
                             <button className='btn btn-link' onClick={ClickToWHF}>World Heart Federation</button>
@@ -91,7 +88,7 @@ const Feed: React.FC<Feed> = (props: Feed) => {
                     <div className="row fadeInLeft animated wow" key={`itempost#${item.id}`}>
                         <div className="row g-0 border-bottom position-relative">
                             <div className="col-md-6 mb-md-0 p-md-4">
-                                <a href={`https://twitter.com/${item.user.username}/status/${item.id}`}><img className='border' src={item.media.url} alt={item.text} style={{ height: '20vh', width: '50vw', objectFit: 'fill' }} /></a>
+                                <a href={`https://twitter.com/${item.user.username}/status/${item.id}`}><img className='border' src={item.media.url} alt={item.text} style={{ objectFit: 'fill' }} /></a>
                             </div>
                             <div className="col-md-6 p-4 ps-md-0">
                                 <div className="row d-flex align-items-baseline">

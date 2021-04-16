@@ -5,7 +5,8 @@ import * as fetch from 'isomorphic-fetch';
 export let AccessToken: string = localStorage.getItem('token') || null;
 export let User:any ={
     userid:localStorage.getItem('userid') || null,
-    ispremmember: localStorage.getItem('ispremmember') || null
+    ispremmember: localStorage.getItem('ispremmember') || null,
+    username: localStorage.getItem('username') || null
 }
 
 export const json = async<T = any>(uri:string,method:string = 'GET',body?:{}) =>{
@@ -40,4 +41,5 @@ export const SetAccessToken =(token:string, user:{} = {userid:undefined,ispremme
     localStorage.setItem('token',token)
     localStorage.setItem('userid',User.userid)
     localStorage.setItem('ispremmember',User.ispremmember)
+    localStorage.setItem('username', User.username)
 }

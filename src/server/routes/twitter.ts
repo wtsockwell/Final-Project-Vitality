@@ -44,7 +44,7 @@ router.get('/worldheartfederation', async (req, res, next) => {
 
 router.get('/news/:id', async (req, res, next) => {
     try {
-        let response = await fetch(`https://api.twitter.com/2/users/${req.params.id}/tweets?max_results=12&expansions=attachments.media_keys,author_id&media.fields=height,media_key,preview_image_url,public_metrics,type,url,width&user.fields=profile_image_url,location&tweet.fields=created_at,source`, {
+        let response = await fetch(`https://api.twitter.com/2/users/${req.params.id}/tweets?max_results=5&expansions=attachments.media_keys,author_id&media.fields=height,media_key,preview_image_url,public_metrics,type,url,width&user.fields=profile_image_url,location&tweet.fields=created_at,source`, {
             headers: {
                 Authorization: `Bearer ${process.env.TW_Bearer}`
             }
